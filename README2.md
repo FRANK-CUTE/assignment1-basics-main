@@ -124,27 +124,35 @@ python scripts/generate.py --vocab_file /root/autodl-tmp/data/tokenizer/vocab.js
 ```
 
 ## 手撕的函数
-
+```
 def softmax(in_features: Float[Tensor, " ..."], dim: int) -> Float[Tensor, " ..."]:
+
 class Linear(nn.Module):
     def __init__(self, in_features, out_features, device=None, dtype=None):
+	
 class Embedding(nn.Module):
     def __init__(self, num_embeddings, embedding_dim, device=None, dtype=None):
     def forward(self, token_ids: torch.Tensor) -> torch.Tensor:
+	
 class RotaryPositionalEmbedding(nn.Module):
     def __init__(self, theta: float, d_k: int, max_seq_len: int, device=None):
     def forward(self, x: torch.Tensor, token_positions: torch.Tensor) -> torch.Tensor:
 
 class CausalMultiHeadSelfAttention(nn.Module):
+
     def __init__(self, d_model, num_heads, positional_encoder):
-def forward(self, x, token_positions=None):
+	
+	def forward(self, x, token_positions=None):
 
 class SwiGLU(nn.Module):
+
     def __init__(self, d_model, d_ff):
 
 class TransformerBlock(nn.Module):
+
     def __init__(self, d_model, num_heads, d_ff, positional_encoder):
-def forward(self, in_features, token_positions):
+	
+	def forward(self, in_features, token_positions):
 
 class TransformerLM(nn.Module):
     def __init__(self,
@@ -209,7 +217,7 @@ def train_bpe(
         special_tokens: list[str],
         **kwargs,
 ) -> tuple[dict[int, bytes], list[tuple[bytes, bytes]]]:
-
+```
 ### generate
 
 ```
